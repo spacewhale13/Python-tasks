@@ -3,9 +3,10 @@
 
 
 def unpacking_elements(list_elements):
-    for i in list_elements:
-        print(i, end=" ")
-    print()
+
+    a, b, c = list_elements
+    print(a, b, c)
+    return a, b, c
 
 
 list_elements = [2, 3, 4]
