@@ -4,10 +4,10 @@
 
 def print_string(line):
     if len(line) >= 10:
-        print(line[4:11])
+        return line[4:11]
     else:
-        print("No god")
-    return line
+        return None
 
 
-print_string("ethnxrfmrmr,mr,mxu")
+new_line = print_string("aeh")
+print(new_line)

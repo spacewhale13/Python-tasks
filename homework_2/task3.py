@@ -2,11 +2,12 @@
 Описание: Создайте переменную со строковым числом, преобразуйте её в целое число, прибавьте число и снова преобразуйте результат в строку."""
 
 
-def changing_types(type, num):
-    type = int(type)
-    type += num
-    print(str(type))
-    return type
+def changing_types(typing, num):
+    typing = int(typing)
+    typing += num
+
+    return str(typing)
 
 
-changing_types("35", 3)
+result = changing_types("35", 3)
+print(type(result))

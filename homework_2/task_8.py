@@ -6,9 +6,10 @@ def analys_text(text):
 
     count_words = len(text.split())
     count_symbols = len(text.replace(" ", ""))
-    print(count_words, count_symbols)
+    return count_words, count_symbols
 
 
 text = "Напишите программу, которая принимает текст, подсчитывает количество слов."
 count_words, count_symbols = 0, 0
-analys_text(text)
+result = analys_text(text)
+print(result)
