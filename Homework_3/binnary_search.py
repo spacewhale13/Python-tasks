@@ -14,6 +14,7 @@ def binary_search(num, target):
         elif num[middle] == target:
 
             return True
+    return False
 
 
 num = [1, 2, 3, 4, 5, 6, 7]
