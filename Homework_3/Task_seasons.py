@@ -1,7 +1,12 @@
 def seasons(season, months_num):
-    for month, months in season.items():
-        if months_num in months:
-            return month
+
+    while months_num.isdigit():
+        if 1 <= int(months_num) <= 12:
+            for month, months in season.items():
+                if int(months_num) in months:
+                    return month
+
+    # return None
 
 
 season = {
@@ -10,7 +15,9 @@ season = {
     "Лето": [6, 7, 8],
     "Осень": [9, 10, 11],
 }
+months_num = input()
+if seasons(season, months_num) == None:
+    print("Введен некорректный месяц")
+else:
 
-
-months_num = int(input())
-print(seasons(season, months_num))
+    print(seasons(season, months_num))
