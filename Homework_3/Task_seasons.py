@@ -5,8 +5,12 @@ def seasons(season, months_num):
             for month, months in season.items():
                 if int(months_num) in months:
                     return month
+    if months_num.isalpha():
+        return "Вы ввели буквы"
 
-    # return None
+    for i in months_num:
+        if i in "!@#$%^&*()_+=-:;|\/":
+            return "Вы ввели неправильные символы"
 
 
 season = {
@@ -16,8 +20,5 @@ season = {
     "Осень": [9, 10, 11],
 }
 months_num = input()
-if seasons(season, months_num) == None:
-    print("Ты дурак")
 
-else:
-    print(seasons(season, months_num))
+print(seasons(season, months_num))

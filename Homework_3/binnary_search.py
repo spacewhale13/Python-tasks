@@ -18,7 +18,5 @@ def binary_search(num, target):
 
 num = [1, 2, 3, 4, 5, 6, 7]
 target = 8
-if binary_search(num, target) == None:
-    print("Элемент не найден")
-else:
-    print(binary_search(num, target))
+
+print(binary_search(num, target))
