@@ -5,8 +5,7 @@ def seasons(season, months_num):
             for month, months in season.items():
                 if int(months_num) in months:
                     return month
-    else:
-        return "Ты дурак"
+
     # return None
 
 
@@ -17,7 +16,8 @@ season = {
     "Осень": [9, 10, 11],
 }
 months_num = input()
-# if seasons(season, months_num) == None:
-# print("Ошибка")
-# else:
-print(seasons(season, months_num))
+if seasons(season, months_num) == None:
+    print("Ты дурак")
+
+else:
+    print(seasons(season, months_num))
