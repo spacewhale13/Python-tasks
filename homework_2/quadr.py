@@ -1,19 +1,11 @@
-import math
-
-a, b, c = float(input()), float(input()), float(input())
-D = (b**2) - 4 * a * c
-if a == 0:
-    if b != 0:
-        print(-c / b)
-elif D < 0:
-    print("Нет корней")
-elif D == 0:
-    print(-b / (2 * a))
-elif D > 0:
-    Ds = math.sqrt(D)
-    x_1 = (-b - Ds) / (2 * a)
-    x_2 = (-b + Ds) / (2 * a)
-    if x_1 > x_2:
-        print(x_2, x_1, sep="\n")
-    else:
-        print(x_1, x_2, sep="\n")
+a1, b1 = int(input()), int(input())
+a2, b2 = int(input()), int(input())
+if (a1 == a2 and abs(b1 - b2) == 1 or b1 == b2 and abs(a1 - a2) == 1) and (
+    (a2 == a1 - 1 and b2 == b1 - 1)
+    or (a2 == a1 + 1 and b2 == b1 - 1)
+    or (a2 == a1 + 1 and b2 == b1 + 1)
+    or (a2 == a1 - 1 and b2 == b1 + 1)
+):
+    print("YES")
+else:
+    print("NO")
