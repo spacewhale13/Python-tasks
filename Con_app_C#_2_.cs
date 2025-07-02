@@ -5,7 +5,7 @@
 using System;
 class Program
 {
-    static void Main(string[] args)
+    static (double, double, int) Input()
     {
         Console.WriteLine("введите левую границу: ");
         double a = double.Parse(Console.ReadLine());
@@ -15,14 +15,22 @@ class Program
 
         Console.WriteLine("введите число итераций: ");
         int n = int.Parse(Console.ReadLine());
-        if(b < a || n <= 0)
+        if (b < a || n <= 0)
         {
             Console.WriteLine("Ошибка");
-            return;
+            throw new Exception("Сообщение");
         }
-        
+        else
+        {
+            return (a, b, n);
+        }
+            
+    }
+    static void Main(string[] args)
+    {
+        (double a, double b, int n) = Input();
 
-            double result = Trapize(Solve, a, b, n);
+        double result = Trapize(Solve, a, b, n);
         Console.WriteLine(result);
     }
     static double Solve(double x)
